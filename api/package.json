@@ -4,7 +4,8 @@
   "description": "A simple MEAN applicatoin that loads and searches feeds from flikr",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js --exec babel-node --presets babel-preset-env"
   },
   "author": "Joshua Fuentes <joshuarpf@gmail.com>",
   "license": "ISC",
