@@ -9,7 +9,6 @@ services:
             - "4200:4200"
         volumes:
             - ./client:/client
-            - /client/node_modules
         links:
             - api
         networks:
@@ -24,7 +23,6 @@ services:
             - "9000:9000"
         volumes:
             - ./api:/api
-            - /api/node_modules
         networks:
           flkvnet:
             ipv4_address: 10.6.0.7
