@@ -1,20 +1,20 @@
 version: "2"
 services:
-    client:
-        build: ./client
-        image: flikr_viewer_client
-        container_name: flikr_viewer_client
-        restart: always
-        ports:
-            - "3000:3000"
-        volumes:
-            - ./client:/client
-            - /client/node_modules
-        links:
-            - api
-        networks:
-          flkvnet:
-            ipv4_address: 10.6.0.2
+    # client:
+    #     build: ./client
+    #     image: flikr_viewer_client
+    #     container_name: flikr_viewer_client
+    #     restart: always
+    #     ports:
+    #         - "3000:3000"
+    #     volumes:
+    #         - ./client:/client
+    #         - /client/node_modules
+    #     links:
+    #         - api
+    #     networks:
+    #       flkvnet:
+    #         ipv4_address: 10.6.0.2
     api:
         build: ./api
         image: flikr_viewer_api
