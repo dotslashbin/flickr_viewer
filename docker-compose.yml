@@ -1,0 +1,39 @@
+version: "2"
+services:
+    client:
+        build: ./client
+        image: flikr_viewer_client
+        container_name: flikr_viewer_client
+        restart: always
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./client:/client
+            - /client/node_modules
+        links:
+            - api
+        networks:
+          flkvnet:
+            ipv4_address: 10.6.0.2
+    api:
+        build: ./api
+        image: flikr_viewer_api
+        container_name: flikr_viewer_api
+        restart: always
+        ports:
+            - "9000:9000"
+        volumes:
+            - ./api:/api
+            - /api/node_modules
+        # depends_on:
+        #     - mongodb
+        networks:
+          flkvnet:
+            ipv4_address: 10.6.0.7
+networks:
+    flkvnet:
+        driver: bridge
+        ipam:
+          config:
+              - subnet: 10.6.0.0/16
+                gateway: 10.6.0.1
