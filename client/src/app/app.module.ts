@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Material
 import { MatCardModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlikrviewComponent } from './flikrview/flikrview.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FlikrviewComponent
   ],
   imports: [
     BrowserModule,
