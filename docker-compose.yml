@@ -2,8 +2,8 @@ version: "2"
 services:
     client:
         build: ./client
-        image: flikr_viewer_client
-        container_name: flikr_viewer_client
+        image: flickr_viewer_client
+        container_name: flickr_viewer_client
         restart: always
         ports:
             - "4200:4200"
@@ -16,8 +16,8 @@ services:
             ipv4_address: 10.6.0.2
     api:
         build: ./api
-        image: flikr_viewer_api
-        container_name: flikr_viewer_api
+        image: flickr_viewer_api
+        container_name: flickr_viewer_api
         restart: always
         ports:
             - "9000:9000"
