@@ -5,6 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// HTTP Modules
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 // Material
 import { MatCardModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +21,8 @@ import { FlikrviewComponent } from './flikrview/flikrview.component';
     FlikrviewComponent
   ],
   imports: [
-    BrowserModule,
+	BrowserModule,
+	HttpClientModule,
     AppRoutingModule,
 	BrowserAnimationsModule,
 	MatCardModule, MatButtonModule,

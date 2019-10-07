@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlickrService } from '../flickr.service';
 
 @Component({
   selector: 'app-flikrview',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlikrviewComponent implements OnInit {
 
-  constructor() { }
+  	constructor(private flickrService: FlickrService) { }
 
-  ngOnInit() {
-	  console.log(`you are here...`)
-  }
+  	ngOnInit() {
+		this.flickrService.getImages().subscribe((images) => {
+			console.log('you are here...')
+			console.log(images);
+		})
+	}
 
 }
