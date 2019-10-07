@@ -14,7 +14,6 @@ const FlickrService = {
 				const returnObject = ReturnStatements.success
 
 				if (result.data) {
-					
 					returnObject.data = result.data.items
 					return response.status(200).send(returnObject)
 				}
