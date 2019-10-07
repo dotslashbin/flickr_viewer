@@ -3,6 +3,13 @@ import FlickrService from '../../services/FlickrService'
 
 const router = Router()
 
+/**
+ * Pointer to the index of the flickr route
+ * @param  {} '/'
+ * @param  {} FlickrService.getImages
+ */
 router.get('/', FlickrService.getImages)
+
+router.post('/search', FlickrService.getImages)
 
 export default router
