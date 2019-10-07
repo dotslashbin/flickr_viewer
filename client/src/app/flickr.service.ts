@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
 
-// Configs 
+// Configs
 import { API_URL } from './common/URLS.js';
 
 // Interfaces
@@ -16,12 +16,9 @@ export class FlickrService {
 
 	constructor(private http: HttpClient) { }
 
-	getImages(searchtag: string) {
-		return this.http.get<ReturnObject>(API_URL);
-	}
-
-	searchImages(input: string): Observable<any> {
-
-		return null;
+	getImages(stringToSearch: string) {
+		if (!stringToSearch) {
+			return this.http.get<ReturnObject>(API_URL);
+		}
 	}
 }
