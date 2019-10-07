@@ -25,11 +25,13 @@ const FlickrService = {
 			.then((result) => {
 				const returnObject = ReturnStatements.success
 
+				// If there is data, it should return an object with the data
 				if (result.data) {
 					returnObject.data = result.data.items
 					return response.status(200).send(returnObject)
 				}
 				
+				// If there is no data, it should still return as a success, but without any data
 				return response.status(200).send(returnObject)
 			})
 			.catch((error) => {
