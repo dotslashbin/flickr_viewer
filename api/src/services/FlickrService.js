@@ -1,19 +1,25 @@
 // Configs 
 import { FLIKR_API_URL } from '../config/index'
 
-// Packakes
+// Packages
 import axios from 'axios'
-1
+
+// Commons
+import ReturnStatements from '../common/ReturnStatements'
+
 const FlickrService = {
 	getImages: async (request, response) => {
 		return axios.get(`${FLIKR_API_URL}`)
 			.then((result) => {
+				const returnObject = ReturnStatements.success
+
 				if (result.data) {
-					console.log(result.data.items)
-					return result.data
+					
+					returnObject.data = result.data.items
+					return response.status(200).send(returnObject)
 				}
 				
-				return []
+				return response.status(200).send(returnObject)
 			})
 			.catch((error) => {
 				console.error(`THERE WAS A PROBLEM FETCHING flickr PHOTOS ... `, error)
