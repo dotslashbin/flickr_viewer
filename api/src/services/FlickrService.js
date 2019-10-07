@@ -1,5 +1,5 @@
 // Configs 
-import { FLIKR_API_URL } from '../config/index'
+import { FLICKR_API_URL } from '../config/index'
 
 // Packages
 import axios from 'axios'
@@ -8,8 +8,20 @@ import axios from 'axios'
 import ReturnStatements from '../common/ReturnStatements'
 
 const FlickrService = {
+	
+	/**
+	 * Function that executes the fetching of images from Flickr API endpoint. 
+	 *
+	 * Before executing the call, thsi will test or the value of request.body.tags to see if there is a tag
+	 * that needs to be included in the query.
+	 * @param  {} request
+	 * @param  {} response
+	 */
 	getImages: async (request, response) => {
-		return axios.get(`${FLIKR_API_URL}`)
+
+		const URLToCall = (request.body.tags)? FLICKR_API_URL + `tags=${request.body.tags}`:FLICKR_API_URL;
+
+		return axios.get(`${URLToCall}`)
 			.then((result) => {
 				const returnObject = ReturnStatements.success
 
