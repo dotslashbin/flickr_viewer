@@ -13,16 +13,14 @@ export class FlikrviewComponent implements OnInit {
 
 	constructor(private flickrService: FlickrService) { }
 
+	/**
+	 * Initialize the app, calling the API backed to fetch images
+	 */
 	ngOnInit() {
-		this.flickrService.getImages().subscribe((result) => {
+		this.flickrService.getImages('').subscribe((result) => {
 			if (result.type === 'success') {
 				this.pictures = result.data;
 			}
 		});
 	}
-
-	searchForPic(searchString) {
-		console.log(`you will search now ... ${searchString}`);
-	}
-
 }

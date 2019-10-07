@@ -16,7 +16,7 @@ export class FlickrService {
 
 	constructor(private http: HttpClient) { }
 
-	getImages() {
+	getImages(searchtag: string) {
 		return this.http.get<ReturnObject>(API_URL);
 	}
 
