@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+
 
 // Configs 
 import { API_URL } from './common/URLS.js';
@@ -8,7 +10,7 @@ import { API_URL } from './common/URLS.js';
 import { ReturnObject } from '../interfaces/ReturnObject'
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class FlickrService {
 
@@ -16,5 +18,10 @@ export class FlickrService {
 
 	getImages() {
 		return this.http.get<ReturnObject>(API_URL);
+	}
+
+	searchImages(input: string): Observable<any> {
+
+		return null;
 	}
 }

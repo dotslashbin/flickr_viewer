@@ -11,9 +11,9 @@ export class FlikrviewComponent implements OnInit {
 
 	pictures: any[];
 
-  	constructor(private flickrService: FlickrService) { }
+	constructor(private flickrService: FlickrService) { }
 
-  	ngOnInit() {
+	ngOnInit() {
 		this.flickrService.getImages().subscribe((result) => {
 			if (result.type === 'success') {
 				this.pictures = result.data;
