@@ -48,7 +48,8 @@ export class FlikrviewComponent implements OnInit {
 		this.pictures = imageCollection.map(pictureData => {
 			return {
 				title: pictureData.title,
-				link: pictureData.media.m
+				link: pictureData.media.m,
+				description: pictureData.description
 			}
 		});
 	}

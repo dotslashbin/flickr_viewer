@@ -1,9 +1,9 @@
 <mat-card>
-		<mat-card-header>
+		<mat-card-header class="section">
 			<mat-card-title>{{ title }}</mat-card-title>
 			<mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
 		</mat-card-header>
-		<mat-card-content>
+		<mat-card-content class="section">
 			<p>
 				This is where you will see the photos
 			</p>
@@ -16,13 +16,10 @@
 				<mat-spinner *ngIf="isLoading == true" [diameter]="20"></mat-spinner>
 			<br>
 	
-			<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-			<mat-card class="card-picture" *ngFor="let picture of pictures">
-				<mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-					<span fxFlex="80%">{{picture.title}}</span>
-				</mat-card-title>
-				
-			</mat-card>
+			<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="container" layout-wrap>
+				<mat-card *ngFor="let picture of pictures" fxFlex="50" class="item">
+					<img src="{{ picture.link }}" />
+				</mat-card>
 			</div>
 		</mat-card-content>
 	</mat-card>
