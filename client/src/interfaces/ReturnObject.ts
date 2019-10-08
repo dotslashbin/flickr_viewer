@@ -1,5 +1,5 @@
 export class ReturnObject {
-	type: string
-	code: number
-	data: any[]
-}
+	type: string;
+	code: number;
+	data: any[];
+};

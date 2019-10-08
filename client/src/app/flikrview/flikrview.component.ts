@@ -26,22 +26,23 @@ export class FlikrviewComponent implements OnInit {
 		this.getImages(''); // Initiall calls get images without any parameters
 	}
 
-	
 	/**
-	 * This is the private method that executes the fetching of images by calling the service methods
+	 * This is the private method that executes the fetching of images by calling the service methods.
+	 *
 	 * @param  {string} inputString 	Input string
 	 */
 	private getImages(inputString: string) {
 		const searchString = (inputString) ? inputString : '';
 
 		this.flickrService.getImages(searchString).subscribe((result) => {
-			if (result.type === 'success') {
+			if (result && result.type === 'success') {
 				this.filterImages(result.data);
 			}
 		});
 
 		this.isLoading = false;
 	}
+
 	/**
 	 * Initializes an array of image with title and link properties to the "pictures" property.L0
 	 * 
@@ -53,7 +54,7 @@ export class FlikrviewComponent implements OnInit {
 				title: pictureData.title,
 				link: pictureData.media.m,
 				description: pictureData.description
-			}
+			};
 		});
 	}
 
