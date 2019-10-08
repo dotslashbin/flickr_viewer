@@ -15,3 +15,13 @@
 .item {
 	margin: 10px;
 }
+
+.item > .title {
+	font-size: 12px;
+	font-weight: bold;
+	max-width: 200px;
+	margin-top: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

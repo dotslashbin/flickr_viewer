@@ -19,6 +19,9 @@
 			<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="container" layout-wrap>
 				<mat-card *ngFor="let picture of pictures" fxFlex="50" class="item">
 					<img src="{{ picture.link }}" />
+					<mat-card-title class="title">
+						{{ picture.title }}
+					</mat-card-title>
 				</mat-card>
 			</div>
 		</mat-card-content>
