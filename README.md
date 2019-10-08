@@ -4,7 +4,7 @@ This is a simple application that simply displays a series of images from Flickr
 Please note that this is a non-production grade application. I simply followed what was required, as I did not have the luxury of time to spend for this test. I would estimate the total work was about 4 hours, since I've been juggling this with baby sitting amongst other responsibilities. 
 
 ## Points for improvement
-As mentioned above, this is app is not for productoin, therefore I only spent minimal time on this. Should this be a real project, here are the things that I will have in place: 
+As mentioned above, this is app is not for production, therefore I only spent minimal time on this. Should this be a real project, here are the things that I will have in place: 
 
 Server
 - Security layer (authenticatoin ro something else) on routes, so that only the flickr routes will have some restrictions, while the index will contain the routes that should be publicly available.
