@@ -9,6 +9,9 @@
 					<input matInput placeholder="Search Picture" type="text" #searchString />
 				</mat-form-field>
 				<button button="submit" mat-raised-button color="primary" (click)="searchForPic(searchString.value)">Search</button>
+				<div *ngIf="isLoading === true" style="margin-left: 30px;">
+					<mat-spinner [diameter]="20"></mat-spinner>
+				</div>
 			</div>
 	
 			<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="container" layout-wrap>
