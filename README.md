@@ -1,10 +1,5 @@
 ## Flikr Viewer
-Fill this one up later .... with the other sections
+This is a simple application that simply shows a series of images from Flickr's public API feed. It may also search feeds based using keywords to match image tags. 
 
-## Importing the data
-git 
-## What I used here
+Please note ...
 
-# Installation guide ( Local )
-
-# Installation guide ( docker )
