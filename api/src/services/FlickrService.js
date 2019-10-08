@@ -15,8 +15,8 @@ const FlickrService = {
 	 * Before executing the call, thsi will test or the value of request.body.tags to see if there is a tag
 	 * that needs to be included in the query.
 	 * 
-	 * @param  {} request
-	 * @param  {} response
+	 * @param  {} request 	HTTP request object
+	 * @param  {} response	HTTP response object
 	 */
 	getImages: async (request, response) => {
 
