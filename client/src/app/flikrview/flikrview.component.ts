@@ -17,10 +17,20 @@ export class FlikrviewComponent implements OnInit {
 	 * Initialize the app, calling the API backed to fetch images
 	 */
 	ngOnInit() {
-		this.flickrService.getImages('').subscribe((result) => {
+		this.getImages('');
+	}
+
+	getImages(inputString: string) {
+		const searchString = (inputString) ? inputString : '';
+
+		this.flickrService.getImages(searchString).subscribe((result) => {
 			if (result.type === 'success') {
 				this.pictures = result.data;
 			}
 		});
+	}
+
+	searchForPic(searchString) {
+		this.getImages(searchString);
 	}
 }
