@@ -6,12 +6,26 @@ Please note that this is a non-production grade application. I simply followed w
 ## What's inside
 - api folder contains a nodejs application as a server to the application
 - client folder contains angular (version 7) application that functions as a client
+- A simple folder structure is in place for the purpose of separation of concerns
+- common/ReturnStatements.js: a class that represents a strcuture of return object to be returned on each API call. This resides in the common folder, along with future classess that are to be accessible throughout the applicatoin. 
+- api/routes/flickrRoutes.js: provides the routing defintions for the endpoints. There is an index file in thsi folder that is to contain any endponit that is to be readily available to the public.
+- services/FlickrService.js: contains the implementation for fetching data from flickr API feed.
+- config/index.js: contains config variables.
+
+
 
 Server ( NodeJS Application ): 
 - Package dependencies: babel, babel-preset, axios, cors and express
+- src/common/URLS.js: contains common variable definitions
+- src/app/flikrview: the component that runs the core of the applicatoin
+- interfaces/ReturnObjects.ts: contains an interface that is readily availble througout the app to use.
+
+
 
 Client ( AngularJS Application ):
 - Basic angular packages with: rxjs and @angular/material
+
+
 
 ## Requirements
 - Browser ( preferrably Chrome )
