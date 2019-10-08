@@ -11,6 +11,8 @@ export class FlikrviewComponent implements OnInit {
 
 	pictures: any[];
 	isLoading: boolean;
+	title: String = '';
+	subtitle: String = '';
 
 	constructor(private flickrService: FlickrService) { this.isLoading = false; }
 
@@ -18,6 +20,8 @@ export class FlikrviewComponent implements OnInit {
 	 * Initialize the app, calling the API backed to fetch images
 	 */
 	ngOnInit() {
+		this.title = 'Simple Flikr Viewer';
+		this.subtitle = 'Created by: Joshua Fuentes';
 		this.isLoading = true;
 		this.getImages(''); // Initiall calls get images without any parameters
 	}
@@ -38,7 +42,6 @@ export class FlikrviewComponent implements OnInit {
 
 		this.isLoading = false;
 	}
-	
 	/**
 	 * Initializes an array of image with title and link properties to the "pictures" property.L0
 	 * 

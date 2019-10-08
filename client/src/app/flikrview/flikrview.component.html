@@ -4,17 +4,15 @@
 			<mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
 		</mat-card-header>
 		<mat-card-content class="section">
-			<p>
-				This is where you will see the photos
-			</p>
 	
 			<mat-form-field class="search-form">
 				<input matInput placeholder="Search Picture" type="text" #searchString />
 			</mat-form-field>
-				<button button="submit" mat-raised-button color="primary" (click)="searchForPic(searchString.value)">Search</button>
-				<span *ngIf="isLoading === true" >Loading ... </span>
-				<mat-spinner *ngIf="isLoading == true" [diameter]="20"></mat-spinner>
-			<br>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+			<button button="submit" mat-raised-button color="primary" (click)="searchForPic(searchString.value)">Search</button>
+				
 	
 			<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" class="container" layout-wrap>
 				<mat-card *ngFor="let picture of pictures" fxFlex="50" class="item">
