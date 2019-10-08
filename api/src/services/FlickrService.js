@@ -19,7 +19,7 @@ const FlickrService = {
 	 */
 	getImages: async (request, response) => {
 
-		const URLToCall = (request.body.tags)? FLICKR_API_URL + `tags=${request.body.tags}`:FLICKR_API_URL;
+		const URLToCall = (request.body.tags)? FLICKR_API_URL + `&tags=${request.body.tags}`:FLICKR_API_URL;
 
 		return axios.get(`${URLToCall}`)
 			.then((result) => {
