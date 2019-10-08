@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 // Material
-import { MatCardModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlikrviewComponent } from './flikrview/flikrview.component';
 
@@ -27,7 +27,7 @@ import { FlikrviewComponent } from './flikrview/flikrview.component';
 	BrowserAnimationsModule,
 	MatCardModule, MatButtonModule,
 	FormsModule, ReactiveFormsModule,
-	MatFormFieldModule, MatIconModule, MatInputModule
+	MatFormFieldModule, MatIconModule, MatInputModule, MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
