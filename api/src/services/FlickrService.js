@@ -14,6 +14,7 @@ const FlickrService = {
 	 *
 	 * Before executing the call, thsi will test or the value of request.body.tags to see if there is a tag
 	 * that needs to be included in the query.
+	 * 
 	 * @param  {} request
 	 * @param  {} response
 	 */
@@ -35,7 +36,10 @@ const FlickrService = {
 				return response.status(200).send(returnObject)
 			})
 			.catch((error) => {
-				console.error(`THERE WAS A PROBLEM FETCHING flickr PHOTOS ... `, error)
+				console.error(`THERE WAS A PROBLEM FETCHING flickr PHOTOS ... `, error);
+				const returnObject = ReturnStatements.failure;
+				returnObject.data = error;
+				return response.status(410).send(returnObject);
 			})
 	}
 }
