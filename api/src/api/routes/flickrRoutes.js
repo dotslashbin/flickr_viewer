@@ -10,6 +10,6 @@ const router = Router()
  */
 router.get('/', FlickrService.getImages)
 
-router.post('/search', FlickrService.getImages)
+router.post('/', FlickrService.getImages)
 
 export default router
